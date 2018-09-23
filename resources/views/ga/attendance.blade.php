@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page_name', 'Home')
+@section('page_name', 'Attendance')
 
 @section('content')
     <div class="container">
@@ -15,6 +15,7 @@
                     <tr>
                         <th></th>
                         <th>&nbsp;</th>
+                        <th>ID</th>
                         @php($counter = 0)
 
                         @for($i = 0; $i < $lab->total_weeks; $i ++)
@@ -28,6 +29,7 @@
                             <tr>
                                 <td></td>
                                 <td>{{$student->name}}</td>
+                                <td>{{$student->student_number}}</td>
                                 @for($i = 0; $i < $counter; $i++)
                                     @if($i < $lab->week)
                                         @php($found = 0)

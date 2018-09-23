@@ -17,7 +17,7 @@ class AttendanceController extends Controller
         $handle = fopen($filename, 'w+');
         $counter = 0;
 
-        $th = array(' ');
+        $th = array(' ', 'ID');
         for($i = 0; $i < $lab->total_weeks; $i ++) {
             array_push($th, 'Week ' . ($counter + 1));
             $counter ++;
@@ -25,7 +25,7 @@ class AttendanceController extends Controller
         fputcsv($handle, $th);
 
         foreach($students as $student) {
-            $studentRow = array($student->name);
+            $studentRow = array($student->name, $student->student_number);
 
             for($i = 0; $i < $lab->total_weeks; $i ++) {
                 if ($i < $lab->week) {
