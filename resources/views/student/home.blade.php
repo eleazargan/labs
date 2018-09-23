@@ -123,7 +123,7 @@
         }
 
         function showPosition(position) {
-            if (distance(position.coords.latitude, position.coords.longitude, lat, long, "K") > 0.04) {
+            if (distance(position.coords.latitude, position.coords.longitude, lat, long, "K") < 0.04) {
                 inside.show();
             } else {
                 outside.show();
