@@ -20,7 +20,7 @@
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top" style="border-bottom: 4px solid #bd8b3b;">
             <div class="container">
-                <div class="navbar-header">
+                <div class="navbar-header" style="height: 104px;">
 
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
@@ -32,7 +32,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img style="max-height:40px; margin-top: -7px;" src="{{ asset('image/UTP-logo.png') }}">
+                        <img style="max-width: 190px;" src="{{ asset('image/UTP-logo.png') }}">
                     </a>
                 </div>
 
